@@ -1,6 +1,6 @@
 ! Title: AWAvenue 秋风广告规则（AWAvenue-Ads-Rule-Replenish）
 ! 规则版本: 0.0.1-beta
-! 更新时间: 2024-01-15
+! 更新时间: 2024-08-28
 ! 
 ! 项目地址：https://github.com/TG-Twilight/AWAvenue-Ads-Rule
 ! 
@@ -34,3 +34,18 @@
 !
 ||weather-drcn.music.dbankcloud.cn^
 # 用于拦截 Whyway 天气的开屏广告，拦截后，可能会导致 更多天气加载失败 等情况。
+!
+||mcdn.bilivideo.cn^
+# 用于拦截睿站的pcdn上传行为，启用后将会使用bilibili自己的视频cdn节点，但同时可能会导致视频播放时弹出验证码等诸如此类的情况。
+!
+||staticsns.cdn.bcebos.com^
+# 用于拦截 baidu Netdisk 部分资源的错误拦截（经核实，该域名为正常内容与广告内容混用链接）。
+!
+||analytics.95516.com^
+# 用于拦截一些追踪行为，但是会导致某些app中的部分页面无法打开（例如云闪付的国补），故移动至此处。
+!
+||p2p.huya.com^
+# 用于拦截虎牙直播的上传行为，但部分线路依赖此行为，好吧，它现在被挪到这里了。
+!
+||static.wxqcloud.qq.com.cn^
+# 用于拦截 WeChat 订阅号中的特殊广告，但部小程序依赖此域名加载css，well, he's here now.
